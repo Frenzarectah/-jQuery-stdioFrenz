@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="http://stdiofrenz.altervista.org/favicon.ico" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+<title>[/stdiofrenz] - handcrafting web</title>
+<meta name="description" content="webdesign e webdeveloper creazione di siti web innovativi responsive e moderni per hobby a prezzi da hobby contattami">
+<meta name="keywords" content="francesco, sorrentino, stdiofrenz, studiofrenz, frenz, webdesign, freelance, freelancer, sito, siti, grafica, frontend, seo"> 
+<meta name="author" content="Frenz">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300italic,300,100italic,100,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+<script src="//im.altervista.org/site_index/html5shiv.js"></script>
+<![endif]-->
+<style type="text/css">
+ html, body {
+         margin: 0;
+         padding: 0;
+         height:100%;
+}
+p{
+margin: 2px;
+}
+.io{
+width:15%;
+}
+a.work{
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+a.work:hover{
+ text-decoration: underline;
+}
+p.right{
+text-align: right;
+}
+.arrow{
+display:none;
+z-index:80;
+transform: rotate(210deg);
+position: absolute;
+top: 0vh;
+right:15vh;
+}
+img#arrow{
+display:none;
+width:100px;
+height:auto;
+}
+.head{
+margin-bottom:10px;
+text-align:center;
+background-image:url("/image/head.jpeg");
+background-size: cover;
+height:90vh;
+color: white; 
+}
+.menu{
+         position: absolute;
+         opacity: 1;
+         display:none;
+         width:500px;
+         z-index: 99;
+         /*background-color: rgba(255,255,255, .3);*/
+      }
+.menuFix{
+    display:block;
+	position:absolute;
+    left:40px;
+    font-size:4vh;
+    width:500px;
+}
+ul{
+   font-size:2.5vh;
+   list-style-type: none;
+   z-index:100;
+}
+li{
+float:left;
+margin:0px 10px 0px;
+}
+.me{
+padding: 2px;
+color: #6e6e6e;
+font-size: 2.5vh;
+font-family: 'Roboto';
+}
+.chisono, .contact{
+display:none;
+}
+.foot{
+text-align:center;
+background-color:#ffffff;
+color:#ffffff;
+padding-top:5px;
+height:60px;
+}
+.fut{
+background-color:#7c6b80;
+height:80px;
+}
+.cit{
+font-style:italic;
+}
+#button-menu{
+display:none;
+position:absolute;
+top:10px;
+right:20px;
+width:20px;
+height:20px;
+float:right;
+z-index:100;
+}
+#logs{ 
+ position: relative;
+ top: 30%;
+}
+#logoxs{
+display:none;
+}
+.repos{
+ position:absolute;
+ left:15px;
+ top: -5px;
+ width:5%;
+ height:auto;
+}
+img#logo{
+max-width: 50%;
+max-height: auto;
+}
+a.list{
+ text-decoration: none;
+ color:white;
+ border: 0px white solid;
+ padding: 3px;
+}
+a.meil{
+ text-decoration: none;
+ color: lightgrey;
+}
+@media only screen and (max-width: 730px){    //breakpoint per intermediate//
+}
+@media only screen and (max-width: 450px){    //breakpoint per cellulari//
+
+#logoxs{
+width:50px;
+height:auto;
+}
+.repos{
+ position:absolute;
+ left:20px;
+ top: 15px;
+ width:10%;
+ height:auto;
+}
+.me{
+font-size: 2vh;
+}
+.menuFix{
+display:none;
+}
+.io{
+width:50%;
+}
+#button-menu{
+display:block;
+position:absolute;
+top:10px;
+right:10px;
+width:35px;
+height:35px;
+float:right;
+z-index:100;
+}
+#logs{ 
+	height: 100px;
+}
+img#logo{    
+display:none;
+position: absolute;
+bottom:90%;
+left:20%;
+max-width: 60%;
+max-height: auto;
+}
+.sub{
+display:none;
+position:absolute;
+top:35%;
+left:32%;
+}
+ul{
+ color: white;
+ margin: 0 2vh 0;
+ position: absolute;
+ top:4px;
+ right:7px;
+}
+.menu{
+	position: absolute;
+    height:90%;
+    width:100%;
+    top: 10px;
+    display: none;
+    /*opacity:1;*/
+    text-align: center;
+    z-index: 99;
+    background-color:rgba(0,0,0,.3);
+    /*background-color: rgba(255,255,255, .2);*/
+}
+li{
+font-size: 8vh;
+float:right;
+text-align: center;
+margin:2vh 2vh 2vh;
+list-style: none;
+}
+};
+</style>
+<script src="https://code.jquery.com/jquery-3.5.0.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+let x = "zero";
+let varmenu;
+$(".el1,.el2,.el3,.el4").hide();
+$("#logo").hide();
+$(".sub").hide();
+$("#logo").fadeIn(2000); //logo che appare
+$(".sub").fadeIn(4000,"swing");
+$(".arrow").fadeIn(3500).fadeOut(6000);
+$(".el2").fadeIn(4000);
+$(".el4").fadeIn(4500);
+$(".el1").fadeIn(5000);
+$(".el3").fadeIn(5500);
+//eventi al click del menu
+$("#button-menu").click(function(){
+if((window.innerWidth > 250)&&(window.innerWidth < 500)){
+varmenu =".menu";
+$(varmenu).toggle("slow");
+}else{ 
+varmenu =".menuFix";
+//$(varmenu).fadeIn();
+};
+});
+$("a.list").mouseover(function(){
+	$(this).animate({borderWidth: "2px"}, 1000);
+});
+$("a.list").mouseleave(function(){
+	$(this).animate({borderWidth:"0px"}, 1000);
+});
+$("a.whoami").click(function(){
+    $(varmenu).toggle("slow");
+    $("#logs").fadeOut(1000);
+    $("#logoxs").fadeIn(2000);	
+	$(".head").animate({height:"10vh"}, 1000);
+    $(x).fadeOut(500);
+    $(".chisono").fadeIn(1500);
+    x = ".chisono";
+});
+$("a.contatto").click(function(){
+    $(varmenu).toggle("slow");
+    $("#logs").fadeOut(1000);
+    $("#logoxs").fadeIn(2000);	
+	$(".head").animate({height:"10vh"}, 1000);
+    $(x).fadeOut(500);
+    $(".contact").fadeIn(1500);
+    x = ".contact";
+});
+$("a.home").click(function(){
+	$(x).fadeOut(500);
+    $(".head").animate({height:"90vh"}, 1000);
+    $("#logoxs").fadeOut(2000);	
+    $("#logs").fadeIn(1000);
+});
+animating = (classx) =>{
+    $(".menu").toggle("slow");
+    $("#logs").fadeOut(1000);
+    $("#logoxs").fadeIn(2000);	
+	$(".head").animate({height:"10vh"}, 1000);
+    $(x).fadeOut(500);
+    $(classx).fadeIn(1500);
+    x = classx;
+};
+});
+</script>
+</head>
+<body class="container-fluid">
+<div class="row">
+  <div class="col">
+   <div class="head align-middle">  
+      <img id="button-menu" src="http://stdiofrenz.altervista.org/image/menu.png">
+      <div id="logs">
+         <img id="logo" src="/image/log.png">
+         <div class="sub"> handcrafting web </div>
+      </div>
+      <div id="logoxs">
+      	<img class="repos" src="/image/loghino.png"/>
+      </div>
+   </div>
+ </div>
+   <div class="menu">
+   <ul>
+   <li><a class="list home"> home</a></li>
+   <li><a class="list whoami"> whoami</a></li>
+   <li><a class="list works"> works </a></li>
+   <li><a class="list contatto"> contact</a></li>
+   </ul>
+   </div>
+   <div class="menuFix">
+   <ul>
+   <li><a class="list home el1"> /home</a></li>
+   <li><a class="list whoami el2"> /whoami</a></li>
+   <li><a class="list works el3"> /works </a></li>
+   <li><a class="list contatto el4"> /contact</a></li>
+   </ul>
+   </div>
+</div>
+<div class="row me">
+	<div class="col-12 chisono">
+        	<p align="center">Ciao, sono Frenz</br>
+			Classe 1987, ho studiato Informatica presso l'ITIS Marconi a Bari, proseguendo poi come "smanettone" in vari ambiti informatici, focalizzandomi in particolare sul web
+			</p>
+            <div class="row me">
+		<div class="col-12 chisono" align="center"><img class="io" src="/image/mi.jpg"></div>
+            </p></div>
+            <p align="center" class="cit">"Non amo particolarmente le etichette, ma se dovessi darmene una mi piace come suona Passionate Webdev"</p>
+			<p align="center">Amo far parte dell'infinito mondo di internet, colorandolo e rendendolo quanto più fluido e semplice possibile.</br>
+				Tutto ciò ovviamente significa anche renderlo responsive, ovvero adatto alla visualizzazione mobile e non.</br>
+          </div>
+      </div>
+</div>
+<div class="row me">
+			<div class="col-12 chisono">
+				<p align="center">I miei progetti sono incentrati sul dettaglio, sul cliente e su ciò che vuole comunicare, trasformando esigenze e bisogni in pagine web.</br>
+				Ecco qualche esempio di come <a class="work">lavoro</a>, a parte questo sito si intende!</br>
+				Ciao e grazie di aver visitato :)</p>
+			</div>
+</div>
+<div class="row">
+    <div class="col-md-4 contact"><div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="it_IT" data-type="horizontal" data-theme="light" data-vanity="francesco-sorrentino-946981105">
+        <a class="LI-simple-link" href='https://it.linkedin.com/in/francesco-sorrentino-946981105?trk=profile-badge'>Francesco Sorrentino</a>
+        </div></div>
+    <div class="col-md-8 contact">Il sito è in costruzione, sono reperibile comunque via linkedin o via <a href="mailto:sorrentino.francesco87@gmail.com">mail</a></div>
+</div>
+<div class="row">
+<div class="col foot fixed-bottom">
+   <div class="fut">Designed and Created by <a class="meil" href="mailto:sorrentino.francesco87@gmail.com">Frenz</a> All rights reserved 2020</div></div>
+</div>
+<div class="arrow"><img id="arrow" src="image/arrow.gif"></div>
+   </body>
+</html>
