@@ -7,4 +7,9 @@ In this version, i've tried to use #jQuery to create animation and dynamic page 
 I've also tried to create a one-page-site.
 Hope You'll like this basic layout!
 
+In order to notice my improvements, i was thinking to modify the layout only using #css-animations <br/>
+with #keyframes method and adding/deleting classes with js.<br/>
+
+Stay tuned! :)
+
 
